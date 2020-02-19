@@ -81,8 +81,6 @@
             this.mainMenuStrip.Name = "mainMenuStrip";
             this.mainMenuStrip.Size = new System.Drawing.Size(987, 33);
             this.mainMenuStrip.TabIndex = 0;
-            this.mainMenuStrip.Text = "";
-
             // 
             // fileToolStripMenuItem
             // 
@@ -104,7 +102,7 @@
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(285, 34);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.NewToolStripMenuItem_Click);
             // 
@@ -151,8 +149,8 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
-            this.exitToolStripMenuItem.Text = "Close and E&xit";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(285, 34);
+            this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
@@ -232,14 +230,12 @@
             this.wordwrapToolStripMenuItem,
             this.fontToolStripMenuItem});
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
-            this.formatToolStripMenuItem.Size = new System.Drawing.Size(85, 32);
+            this.formatToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
             this.formatToolStripMenuItem.Text = "F&ormat";
             // 
             // wordwrapToolStripMenuItem
             // 
-            this.wordwrapToolStripMenuItem.Checked = true;
             this.wordwrapToolStripMenuItem.CheckOnClick = true;
-            this.wordwrapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.wordwrapToolStripMenuItem.Name = "wordwrapToolStripMenuItem";
             this.wordwrapToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.W)));
@@ -364,6 +360,7 @@
             this.mainTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.mainTextBox.Size = new System.Drawing.Size(987, 564);
             this.mainTextBox.TabIndex = 2;
+            this.mainTextBox.WordWrap = false;
             this.mainTextBox.TextChanged += new System.EventHandler(this.MainTextBox_TextChanged);
             this.mainTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainTextBox_DragDrop);
             this.mainTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainTextBox_DragEnter);
