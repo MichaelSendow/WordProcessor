@@ -576,7 +576,10 @@ namespace WordProcessor
         private void WordWrapToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Quick and easy way to flip the predicate for wordwrap
+            int selectionStart = mainTextBox.SelectionStart;
             mainTextBox.WordWrap = !mainTextBox.WordWrap;
+            mainTextBox.SelectionStart = selectionStart;
+            mainTextBox.ScrollToCaret();
         }
 
 

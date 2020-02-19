@@ -237,9 +237,8 @@
             // 
             this.wordwrapToolStripMenuItem.CheckOnClick = true;
             this.wordwrapToolStripMenuItem.Name = "wordwrapToolStripMenuItem";
-            this.wordwrapToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.W)));
-            this.wordwrapToolStripMenuItem.Size = new System.Drawing.Size(322, 34);
+            this.wordwrapToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.wordwrapToolStripMenuItem.Size = new System.Drawing.Size(274, 34);
             this.wordwrapToolStripMenuItem.Text = "Word Wrap";
             this.wordwrapToolStripMenuItem.Click += new System.EventHandler(this.WordWrapToolStripMenuItem_Click);
             // 
