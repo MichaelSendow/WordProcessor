@@ -21,7 +21,11 @@ namespace WordProcessor
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WordProcessor());
+            using (MyWordProcessor myWordProcessor = new MyWordProcessor())
+            {
+                Application.Run(myWordProcessor);
+            }
+            
         }
 
         internal class NativeMethods

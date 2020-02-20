@@ -9,7 +9,7 @@ namespace WordProcessor
     /// <summary>
     /// Class that will fullfill the Version 3 of the second assignment of the course DVGB07,vt20 C#.NET 34465
     /// </summary>
-    public partial class WordProcessor : Form
+    public partial class MyWordProcessor : Form
     {
         //Predicate to keep track if document has changed.
         private bool documentChanged = false;
@@ -32,7 +32,7 @@ namespace WordProcessor
         private int whitespaceCount = 0;
         private int wordCount = 0;
 
-        public WordProcessor()
+        public MyWordProcessor()
         {
             InitializeComponent();
         }
@@ -216,6 +216,11 @@ namespace WordProcessor
                 //Change the font and color if users clicked on OK
                 mainTextBox.Font = fontDialog.Font;
                 mainTextBox.ForeColor = fontDialog.Color;
+                mainTextBox.ScrollToCaret();
+                //The textbox was misbehaving, this forces a redraw.
+                mainTextBox.Visible = false;
+                mainTextBox.Visible = true;
+
             }
         }
 
@@ -794,7 +799,7 @@ namespace WordProcessor
 
             try
             {
-                if (filePathName.Length == 0)
+                if (filePathName.Length != 0)
                 {
                     //filePathName is already set and file is "open"
                     File.WriteAllText(filePathName, mainTextBox.Text);
