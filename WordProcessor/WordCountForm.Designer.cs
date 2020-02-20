@@ -219,10 +219,22 @@
         private System.Windows.Forms.Label CharactersNoSpacesLabel;
         private System.Windows.Forms.Label WordsLabel;
         private System.Windows.Forms.Label CharacterWithSpacesLabel;
-        public System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button CloseButton;
+        /// <summary>
+        /// Needs to be public so that the label text can be changed from other classes.
+        /// </summary>
         public System.Windows.Forms.Label LinesCountTextBox;
+        /// <summary>
+        /// Needs to be public so that the label text can be changed from other classes.
+        /// </summary>
         public System.Windows.Forms.Label WordsCountTextBox;
+        /// <summary>
+        /// Needs to be public so that the label text can be changed from other classes.
+        /// </summary>
         public System.Windows.Forms.Label CharacterCountNoSpaceTextBox;
+        /// <summary>
+        /// Needs to be public so that the label text can be changed from other classes.
+        /// </summary>
         public System.Windows.Forms.Label CharactersCountTextBox;
         private System.Windows.Forms.SplitContainer splitContainer;
         private System.Windows.Forms.GroupBox LabelGroupBox;

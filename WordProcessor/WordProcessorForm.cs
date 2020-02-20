@@ -30,6 +30,9 @@ namespace WordProcessor
         private int whitespaceCount = 0;
         private int wordCount = 0;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MyWordProcessor()
         {
             InitializeComponent();
@@ -584,8 +587,8 @@ namespace WordProcessor
             mainTextBox.Focus();
         }
 
-
         //Auxiliary methods
+
         /// <summary>
         /// Shows a dialog that asks if user wants to save changes to the opened document.
         /// </summary>
