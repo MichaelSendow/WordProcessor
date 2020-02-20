@@ -14,7 +14,6 @@ namespace WordProcessor
         //Predicate to keep track if document has changed.
         private bool documentChanged = false;
 
-
         //The current file that is open.
         private string filePathName = "";
 
@@ -22,9 +21,8 @@ namespace WordProcessor
         private const string defaultFileName = "dok1.txt";
         private const string initialDirectory = "%HomePath%\\Documents\\";
 
-
-        //If the BGW is running when a exit is issued I need it to finish up and then exit the program
-        //This ensures it
+        //If the BGW is running when a exit is issued I need it to finish up and then exit the program.
+        //This ensures it.
         private bool closeRequested = false;
 
         //Counters for the informationrow
@@ -40,7 +38,6 @@ namespace WordProcessor
         private void WordProcessor_Load(object sender, EventArgs e)
         {
             //Set the titlebar text
-
             this.Text = $"{defaultFileName} - Vörd";
 
         }
@@ -140,7 +137,6 @@ namespace WordProcessor
             }
             else if (e.Cancelled == false)
             {
-
                 //Update the InfromationRowLabels with the work of the BGW
                 charactersToolStripLabel.Text = $"{characterCount + whitespaceCount}";
                 charactersNoWhitespacesToolStripLabel.Text = $"{characterCount}";
@@ -197,7 +193,7 @@ namespace WordProcessor
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //i.e Form.Close() - Signals that user wants to close the application
-            Close();
+            this.Close();
         }
 
         /// <summary>
@@ -220,7 +216,7 @@ namespace WordProcessor
                 //The textbox was misbehaving, this forces a redraw.
                 mainTextBox.Visible = false;
                 mainTextBox.Visible = true;
-
+                mainTextBox.Focus();
             }
         }
 
@@ -234,19 +230,19 @@ namespace WordProcessor
 
             //Do a new word count
             int[] CountArray = UpdateLabels();
-            WordCountForm wordCountForm = new WordCountForm();
 
-            //Set the dialog values
-            wordCountForm.CharactersCountTextBox.Text = $"{CountArray[0] + CountArray[1]}";
-            wordCountForm.CharacterCountNoSpaceTextBox.Text = $"{CountArray[0]}";
-            wordCountForm.WordsCountTextBox.Text = $"{CountArray[2]}";
-            wordCountForm.LinesCountTextBox.Text = mainTextBox.Lines.Length.ToString(CultureInfo.InvariantCulture);
+            using (WordCountForm wordCountForm = new WordCountForm())
+            {
+                //Set the dialog values
+                wordCountForm.CharactersCountTextBox.Text = $"{CountArray[0] + CountArray[1]}";
+                wordCountForm.CharacterCountNoSpaceTextBox.Text = $"{CountArray[0]}";
+                wordCountForm.WordsCountTextBox.Text = $"{CountArray[2]}";
+                wordCountForm.LinesCountTextBox.Text = mainTextBox.Lines.Length.ToString(CultureInfo.InvariantCulture);
 
-            wordCountForm.ShowDialog();
-            wordCountForm.Dispose();
-
-
+                wordCountForm.ShowDialog();
+            }
         }
+
         /// <summary>
         /// Manages the drag and drop feature.
         /// </summary>
@@ -359,7 +355,8 @@ namespace WordProcessor
 
             }
             //3.Update the labels via a background worker as to not freeze up the UI.
-            //I only run one bgw at a time. I feel that it is unnecessary to cancel the one running since you can always get the correct numbers by clicking the informationrow.
+            //I only run one bgw at a time. If it is running cancel it since it will get the latest and greatest values
+            //I will start it again in BackgroundWorker_RunWorkerCompleted method
             if (backgroundWorker.IsBusy != true)
             {
                 backgroundWorker.RunWorkerAsync();
@@ -367,7 +364,6 @@ namespace WordProcessor
             else
             {
                 backgroundWorker.CancelAsync();
-                //cancelBgw = true;
             }
         }
 
@@ -509,7 +505,7 @@ namespace WordProcessor
         }
 
         /// <summary>
-        /// This method is run when a Close() has been initiated. It asks the user to save changes before continuing with the shutdown
+        /// This method is run when a Close() has been initiated. It does some cleanup of the BGW and asks user to save changes before quitting.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -585,6 +581,7 @@ namespace WordProcessor
             mainTextBox.WordWrap = !mainTextBox.WordWrap;
             mainTextBox.SelectionStart = selectionStart;
             mainTextBox.ScrollToCaret();
+            mainTextBox.Focus();
         }
 
 
@@ -653,6 +650,7 @@ namespace WordProcessor
                 //Make sure nothing is selected
                 mainTextBox.SelectionLength = 0;
                 mainTextBox.ScrollToCaret();
+                mainTextBox.Focus();
             }
         }
 
@@ -743,6 +741,7 @@ namespace WordProcessor
                     mainTextBox.ScrollToCaret();
                     this.Text = $"{ Path.GetFileName(filePathName)} - Vörd";
                     documentChanged = false;
+                    mainTextBox.Focus();
                 }
                 catch (Exception ex)
                 {
