@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordProcessor", "WordProces
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C090DE7-5827-4F4F-9CA0-4475C3FAA203}"
 	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
+		Laboration_2.pdf = Laboration_2.pdf
 	EndProjectSection
 EndProject
 Global
