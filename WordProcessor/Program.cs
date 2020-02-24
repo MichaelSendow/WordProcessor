@@ -25,7 +25,7 @@ namespace WordProcessor
             {
                 Application.Run(myWordProcessor);
             }
-            
+
         }
 
         internal class NativeMethods
