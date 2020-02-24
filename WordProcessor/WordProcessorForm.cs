@@ -397,6 +397,12 @@ namespace WordProcessor
                     {
                         NewWindow();
                     }
+                    else
+                    {
+                        //Sometimes the text was beeing selected. This is to ensure nothing changed
+                        mainTextBox.SelectionStart = selectionStart;
+                        mainTextBox.SelectionLength = selectionLength;
+                    }
                 }
                 else if (result == DialogResult.No)
                 {
