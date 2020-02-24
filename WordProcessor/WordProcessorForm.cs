@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
-using System.IO;
-using System.Text;
-using System.Windows.Forms;
 using System.Globalization;
+using System.IO;
+using System.Windows.Forms;
+
 namespace WordProcessor
 {
     /// <summary>
@@ -240,9 +240,9 @@ namespace WordProcessor
             int[] CountArray = UpdateLabels();
 
             using (WordCountForm wordCountForm = new WordCountForm(
-                mainTextBox.Lines.Length, 
-                CountArray[2], 
-                CountArray[0], 
+                mainTextBox.Lines.Length,
+                CountArray[2],
+                CountArray[0],
                 CountArray[0] + CountArray[1]))
             {
                 wordCountForm.ShowDialog();
