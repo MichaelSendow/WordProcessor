@@ -38,6 +38,11 @@ namespace WordProcessor
             InitializeComponent();
         }
 
+        /// <summary>
+        /// When the form is loaded I set the titlebar text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WordProcessor_Load(object sender, EventArgs e)
         {
             //Set the titlebar text

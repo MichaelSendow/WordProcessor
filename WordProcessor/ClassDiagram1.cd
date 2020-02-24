@@ -19,6 +19,19 @@
   </Class>
   <Class Name="WordProcessor.WordCountForm">
     <Position X="3.75" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="CharactersNoSpacesLabel" Hidden="true" />
+      <Field Name="CharacterWithSpacesLabel" Hidden="true" />
+      <Field Name="CloseButton" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="CountsGroupBox" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="LabelGroupBox" Hidden="true" />
+      <Field Name="LinesLabel" Hidden="true" />
+      <Field Name="splitContainer" Hidden="true" />
+      <Field Name="WordsLabel" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>BAAAIBAAACgEAAAAAKCABAASBAAAEQAAAAAAAAAAgAA=</HashCode>
       <FileName>WordCountForm.cs</FileName>
@@ -26,21 +39,50 @@
   </Class>
   <Class Name="WordProcessor.MyWordProcessor">
     <Position X="0.5" Y="0.5" Width="3" />
+    <Members>
+      <Field Name="aboutToolStripMenuItem" Hidden="true" />
+      <Field Name="backgroundWorker" Hidden="true" />
+      <Field Name="charactersNoWhitespacesToolStripLabel" Hidden="true" />
+      <Field Name="charactersToolStripLabel" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="copyToolStripMenuItem" Hidden="true" />
+      <Field Name="cutToolStripMenuItem" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="editToolStripMenuItem" Hidden="true" />
+      <Field Name="editToolStripSeparator1" Hidden="true" />
+      <Field Name="editToolStripSeparator2" Hidden="true" />
+      <Field Name="exitToolStripMenuItem" Hidden="true" />
+      <Field Name="fileToolStripMenuItem" Hidden="true" />
+      <Field Name="fileToolStripSeparator1" Hidden="true" />
+      <Field Name="fileToolStripSeparator2" Hidden="true" />
+      <Field Name="fontDialog" Hidden="true" />
+      <Field Name="fontToolStripMenuItem" Hidden="true" />
+      <Field Name="formatToolStripMenuItem" Hidden="true" />
+      <Field Name="helpToolStripMenuItem" Hidden="true" />
+      <Field Name="informationRowToolStrip" Hidden="true" />
+      <Field Name="informationRowToolStripSeparator1" Hidden="true" />
+      <Field Name="informationRowToolStripSeparator2" Hidden="true" />
+      <Field Name="informationRowToolStripSeparator3" Hidden="true" />
+      <Field Name="informationRowToolStripSeparator4" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="linesToolStripLabel" Hidden="true" />
+      <Field Name="mainMenuStrip" Hidden="true" />
+      <Field Name="mainTextBox" Hidden="true" />
+      <Field Name="newToolStripMenuItem" Hidden="true" />
+      <Field Name="openFileDialog" Hidden="true" />
+      <Field Name="openToolStripMenuItem" Hidden="true" />
+      <Field Name="pasteToolStripMenuItem" Hidden="true" />
+      <Field Name="saveAsToolStripMenuItem" Hidden="true" />
+      <Field Name="saveFileDialog" Hidden="true" />
+      <Field Name="saveToolStripMenuItem" Hidden="true" />
+      <Field Name="selectAllToolStripMenuItem" Hidden="true" />
+      <Field Name="undoToolStripMenuItem" Hidden="true" />
+      <Field Name="wordsToolStripLabel" Hidden="true" />
+      <Field Name="wordwrapToolStripMenuItem" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>BCCQCwAgAmkQBAWIgMDWyIMWgAABEEEIT2AgB2AQAB4=</HashCode>
       <FileName>WordProcessorForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="WordProcessor.Properties.Resources">
-    <Position X="3.75" Y="5.25" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="WordProcessor.Properties.Settings">
-    <Position X="6.5" Y="3.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
