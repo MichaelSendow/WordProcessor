@@ -31,7 +31,7 @@
             this.LinesCountTextBox = new System.Windows.Forms.Label();
             this.WordsCountTextBox = new System.Windows.Forms.Label();
             this.CharacterCountNoSpaceTextBox = new System.Windows.Forms.Label();
-            this.CharactersCountTextBox = new System.Windows.Forms.Label();
+            this.CharactersCountTotalTextBox = new System.Windows.Forms.Label();
             this.LinesLabel = new System.Windows.Forms.Label();
             this.CharactersNoSpacesLabel = new System.Windows.Forms.Label();
             this.WordsLabel = new System.Windows.Forms.Label();
@@ -86,15 +86,15 @@
             // 
             // CharactersCountTextBox
             // 
-            this.CharactersCountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CharactersCountTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CharactersCountTextBox.Location = new System.Drawing.Point(38, 22);
-            this.CharactersCountTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
-            this.CharactersCountTextBox.Name = "CharactersCountTextBox";
-            this.CharactersCountTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CharactersCountTextBox.Size = new System.Drawing.Size(124, 19);
-            this.CharactersCountTextBox.TabIndex = 0;
-            this.CharactersCountTextBox.Text = "0";
+            this.CharactersCountTotalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CharactersCountTotalTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CharactersCountTotalTextBox.Location = new System.Drawing.Point(38, 22);
+            this.CharactersCountTotalTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
+            this.CharactersCountTotalTextBox.Name = "CharactersCountTextBox";
+            this.CharactersCountTotalTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CharactersCountTotalTextBox.Size = new System.Drawing.Size(124, 19);
+            this.CharactersCountTotalTextBox.TabIndex = 0;
+            this.CharactersCountTotalTextBox.Text = "0";
             // 
             // LinesLabel
             // 
@@ -178,7 +178,7 @@
             // CountsGroupBox
             // 
             this.CountsGroupBox.Controls.Add(this.LinesCountTextBox);
-            this.CountsGroupBox.Controls.Add(this.CharactersCountTextBox);
+            this.CountsGroupBox.Controls.Add(this.CharactersCountTotalTextBox);
             this.CountsGroupBox.Controls.Add(this.CharacterCountNoSpaceTextBox);
             this.CountsGroupBox.Controls.Add(this.WordsCountTextBox);
             this.CountsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -220,22 +220,10 @@
         private System.Windows.Forms.Label WordsLabel;
         private System.Windows.Forms.Label CharacterWithSpacesLabel;
         private System.Windows.Forms.Button CloseButton;
-        /// <summary>
-        /// Needs to be public so that the label text can be changed from other classes.
-        /// </summary>
-        public System.Windows.Forms.Label LinesCountTextBox;
-        /// <summary>
-        /// Needs to be public so that the label text can be changed from other classes.
-        /// </summary>
-        public System.Windows.Forms.Label WordsCountTextBox;
-        /// <summary>
-        /// Needs to be public so that the label text can be changed from other classes.
-        /// </summary>
-        public System.Windows.Forms.Label CharacterCountNoSpaceTextBox;
-        /// <summary>
-        /// Needs to be public so that the label text can be changed from other classes.
-        /// </summary>
-        public System.Windows.Forms.Label CharactersCountTextBox;
+        private System.Windows.Forms.Label LinesCountTextBox;
+        private System.Windows.Forms.Label WordsCountTextBox;
+        private System.Windows.Forms.Label CharacterCountNoSpaceTextBox;
+        private System.Windows.Forms.Label CharactersCountTotalTextBox;
         private System.Windows.Forms.SplitContainer splitContainer;
         private System.Windows.Forms.GroupBox LabelGroupBox;
         private System.Windows.Forms.GroupBox CountsGroupBox;

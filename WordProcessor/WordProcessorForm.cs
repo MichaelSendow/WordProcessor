@@ -239,14 +239,12 @@ namespace WordProcessor
             //Do a new word count
             int[] CountArray = UpdateLabels();
 
-            using (WordCountForm wordCountForm = new WordCountForm())
+            using (WordCountForm wordCountForm = new WordCountForm(
+                mainTextBox.Lines.Length, 
+                CountArray[2], 
+                CountArray[0], 
+                CountArray[0] + CountArray[1]))
             {
-                //Set the dialog values
-                wordCountForm.CharactersCountTextBox.Text = $"{CountArray[0] + CountArray[1]}";
-                wordCountForm.CharacterCountNoSpaceTextBox.Text = $"{CountArray[0]}";
-                wordCountForm.WordsCountTextBox.Text = $"{CountArray[2]}";
-                wordCountForm.LinesCountTextBox.Text = mainTextBox.Lines.Length.ToString(CultureInfo.InvariantCulture);
-
                 wordCountForm.ShowDialog();
             }
         }

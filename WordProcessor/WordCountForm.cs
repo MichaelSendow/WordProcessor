@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace WordProcessor
 {
@@ -11,9 +12,17 @@ namespace WordProcessor
         /// <summary>
         /// Constructor
         /// </summary>
-        public WordCountForm()
+        public WordCountForm(
+            int LinesCount = 0,
+            int WordsCount = 0,
+            int CharacterCountNoSpace = 0,
+            int CharactersCountTotal = 0)
         {
             InitializeComponent();
+            LinesCountTextBox.Text = LinesCount.ToString(CultureInfo.InvariantCulture);
+            WordsCountTextBox.Text = WordsCount.ToString(CultureInfo.InvariantCulture);
+            CharacterCountNoSpaceTextBox.Text = CharacterCountNoSpace.ToString(CultureInfo.InvariantCulture);
+            CharactersCountTotalTextBox.Text = CharactersCountTotal.ToString(CultureInfo.InvariantCulture);
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
